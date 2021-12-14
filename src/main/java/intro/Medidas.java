@@ -11,10 +11,52 @@ package intro;
 
              public static void main (String[] args) {
 
-                    calculodeareamodocurto();
-                    calculodedeareamodolongo();
+                                            // INICIO DO USO "switch"
+
+                        String opcao = "outro";
+
+                        switch (opcao) {
+                            case "ifsimples" :
+                                System.out.println("Voce escolheu executar os metodo ifsimples");
+                                ifsimples();
+                                break;
+                            case "curto" :
+                                System.out.println("Voce escolheu executar os metodo calculodeareamodocurto");
+                                calculodeareamodocurto();
+                                break;
+                            case "longo" :
+                                System.out.println("Voce escolheu executar os metodo longo");
+                                calculodedeareamodolongo();
+                                break;
+                            default:
+                                System.out.println("Voce não escolheu nenhum metodo conhecido");
+                                calculodedeareamodolongo();
+                                break;
+
+                        }
+
+
 
              }
+
+                    public static void ifsimples () {
+
+                                            // INICIO DO USO "if" e do "else"
+
+
+                        String modo = "curto";
+
+                        if (modo =="curto") {
+                            calculodeareamodocurto();
+                        }
+                        else {
+                            calculodedeareamodolongo();
+                        }
+                                            // FINAL DO USO "if" e do "else"
+
+                    }
+
+
                                             // INICIO CALCULO DE AREA - MODO CURTO
 
              public static void calculodeareamodocurto(){
@@ -55,8 +97,6 @@ package intro;
 
          }
                                             // FINAL CALCULO DE AREA MODO LONGO
-
-
 
 
 }
